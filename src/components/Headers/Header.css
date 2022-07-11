@@ -1,0 +1,29 @@
+.MuiBox-root.css-1t6c9ts {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.css-1t6c9ts {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+header.MuiPaper-root.MuiPaper-elevation.MuiPaper-elevation4.MuiAppBar-root.MuiAppBar-colorPrimary.MuiAppBar-positionStatic.css-hip9hq-MuiPaper-root-MuiAppBar-root {
+	background-color: white;
+}
+
+button.MuiButton-root.MuiButton-text.MuiButton-textPrimary.MuiButton-sizeMedium.MuiButton-textSizeMedium.MuiButtonBase-root.css-1q39md6-MuiButtonBase-root-MuiButton-root {
+	font: 16px sans-serif;
+	color: #2b5075;
+}
+
+button.MuiButtonBase-root.MuiIconButton-root.MuiIconButton-colorInherit.MuiIconButton-sizeLarge.css-1pz7awu-MuiButtonBase-root-MuiIconButton-root {
+	font: 16px sans-serif;
+	color: #2b5075;
+}
+.LogoBar {
+	display: flex;
+	/* justify-content: center; */
+	align-items: center;
+}

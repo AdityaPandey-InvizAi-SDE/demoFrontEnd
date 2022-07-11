@@ -1,0 +1,164 @@
+.chatBoxMain {
+	padding: 20px;
+	background-color: #f1f1f1;
+}
+.MuiContainer-root.MuiContainer-maxWidthLg.makeStyles-paper-1.css-1oqqzyl-MuiContainer-root {
+	border: 0px solid white !important;
+	border-radius: 5px;
+	/* box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
+	padding: 15px;
+	background-color: #f1f1f1;
+}
+.MuiContainer-root.MuiContainer-maxWidthLg.makeStyles-paper-27.css-1oqqzyl-MuiContainer-root {
+	border: 2px solid white;
+}
+.MuiContainer-root.MuiContainer-maxWidthLg.makeStyles-paper-14.css-1oqqzyl-MuiContainer-root {
+	border: 0px !important;
+	/* border-radius: 5px; */
+	/* box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
+
+	background-color: #f1f1f1;
+	display: flex;
+	flex-direction: column;
+	padding-top: 10px;
+}
+
+.Heading {
+	border-radius: 15px;
+	height: 8%;
+	padding: 10px 0px 11px 0px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	background-color: #034d9c;
+	box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+		rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+		rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.MuiGrid-root.MuiGrid-container.MuiGrid-spacing-xs-undefined.css-cpk47q-MuiGrid-root {
+	padding: 22px 0px 0px 0px;
+}
+.MuiGrid-root.MuiGrid-item.MuiGrid-grid-xs-6.css-ayy8wd-MuiGrid-root {
+	width: 100%;
+	/* padding-left: 24px; */
+}
+.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation1.ForwardRef\(Paper\)-root-9.ForwardRef\(Paper\)-root-11.css-1ps6pg7-MuiPaper-root {
+	width: 100% !important;
+	padding: 8px 0px 0px 0px;
+}
+.msg-inbox {
+	width: 100%;
+	border: 0px;
+	height: 100%;
+	margin: 0px;
+}
+.msg-header {
+	width: 100% !important;
+	background-color: #0664c9;
+}
+.MuiGrid-root.MuiGrid-container.MuiGrid-spacing-xs-1.css-a5rdam-MuiGrid-root {
+	width: 100% !important;
+}
+.outgoing-chats {
+	width: 100% !important;
+}
+.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation1.ForwardRef\(Paper\)-root-9.ForwardRef\(Paper\)-root-11.css-1ps6pg7-MuiPaper-root {
+	padding: 0px;
+	margin: 0px;
+	border-radius: 25px;
+	box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+		rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+		rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.outgoing-chats {
+	padding: 10px 0px 10px 0px !important;
+	margin: 0px;
+}
+h1.Head {
+	color: white;
+	font-weight: 700;
+	font-family: system-ui;
+	font-size: 6vh;
+}
+
+.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation1.ForwardRef\(Paper\)-root-22.ForwardRef\(Paper\)-root-24.css-1ps6pg7-MuiPaper-root {
+	padding: 0px;
+	border-radius: 26px;
+}
+
+.msg-page {
+	/* padding-top: 50px; */
+	margin-top: -43px;
+}
+
+.outgoing-chats-msg {
+	padding: 6px 10px;
+	border-radius: 0px 6px 0px 6px;
+	position: relative;
+	background: #0993ff94;
+	border: 2px #0993ff94;
+	color: #6c6c6c;
+	font-size: 12px;
+}
+.outgoing-chats-msg:after {
+	content: "";
+	position: absolute;
+	border: 12px solid transparent;
+	border-top: 10px solid #0993ff94;
+	border-right: none;
+	bottom: -22px;
+	right: 0px;
+}
+.recieved-msg-inbox p {
+	padding: 6px 10px;
+	border-radius: 6px 0 6px 0;
+	position: relative;
+	background: rgba(100, 170, 0, 0.1);
+	border: 2px solid rgba(100, 170, 0, 0.1);
+	color: #6c6c6c;
+	font-size: 12px;
+}
+.recieved-msg-inbox p:after {
+	content: "";
+	position: absolute;
+	margin: -1.5em 1.87em;
+	width: 0;
+	height: 0;
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid transparent;
+	border-left: 10px solid rgba(255, 255, 255, 0.2);
+}
+img.makeStyles-stopsignStyle-4 {
+	display: none;
+}
+
+.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation1.ForwardRef\(Paper\)-root-9.ForwardRef\(Paper\)-root-13.css-1ps6pg7-MuiPaper-root {
+	box-shadow: rgb(0 0 0 / 25%) 0px 54px 55px, rgb(0 0 0 / 12%) 0px -12px 30px,
+		rgb(0 0 0 / 12%) 0px 4px 6px, rgb(0 0 0 / 17%) 0px 12px 13px,
+		rgb(0 0 0 / 9%) 0px -3px 5px;
+}
+form.formElement {
+	display: flex;
+	justify-content: center;
+	padding: 5px 5px 22px 5px;
+	align-items: center;
+}
+.MuiFormControl-root.MuiTextField-root.makeStyles-formStyle-6.css-1u3bzj6-MuiFormControl-root-MuiTextField-root {
+	width: 100%;
+	padding-left: 2px;
+}
+
+button.MuiButton-root.MuiButton-text.MuiButton-textPrimary.MuiButton-sizeMedium.MuiButton-textSizeMedium.MuiButtonBase-root.makeStyles-buttonStyle-7.css-1e6y48t-MuiButtonBase-root-MuiButton-root {
+	background-color: #0664c9;
+	box-shadow: rgb(99 99 99 / 20%) 0px 2px 8px 0px;
+	margin-top: 40px;
+	height: 47px;
+	color: white;
+	font-weight: bold;
+}
+.MuiOutlinedInput-root.MuiInputBase-root.MuiInputBase-colorPrimary.MuiInputBase-formControl.css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root {
+	border-radius: 30px;
+}

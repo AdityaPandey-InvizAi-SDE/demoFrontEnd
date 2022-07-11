@@ -1,0 +1,86 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel ="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>ChatBot For UI Design</title>
+</head>
+<body>
+    <div id="trigger_chat">
+        <button id="trigger_chatbot"><img src='SAL_avatar.png'></button>
+    </div>
+    <div class="container">
+        <div class="msg-header">
+            <div class="msg-header-img">
+                <img src="SAL_avatar.png">
+            </div>
+            <div class="active">
+                <h6>YUTY AI DIGITAL BEAUTY ADVISOR</h6>
+            </div> 
+            <div class="header-icons">
+                <button class="stop-chatbot"><img src='x-icon.png'></button>
+            </div>
+        </div>
+        <div class="chat-page">
+            <div class="msg-inbox">
+                <div class="chat">
+                    <div class="msg-page">
+                        
+                            <div class="outgoing-chats">
+                                <div class="outgoing-chats-msg">
+                                    <p>Hello 👋🏾 I'm YUTY, your AI beauty advisor, what's your name?</p>
+                                    <span class="time">11:01 PM | October 11</span>
+                                </div>
+                                <div class="outgoing-chats-img">
+                                    <img src="SAL_avatar.png">
+                                </div>
+                                    
+                                </div>
+                            
+                    </div>
+                               
+                <div class="msg-bottom">
+                        <!-- <div class="bottom-icons">
+                            <i class="fa fa-plus-circle"></i>
+                            <i class="fa fa-camera"></i>
+                            <i class="fa fa-microphone"></i>
+                            <i class= "fa-smile-o"></i>
+                        </div> -->
+                        <!-- <div class="input-group">
+                            <input type="text" class="form-control" name="input-msg"   placeholder="Write message here....">
+                            <div class="input-group-append">
+                                <span class="input-group-text">
+                                    <i class="fa fa-paper-plane"></i>
+                                </span>
+                            </div>
+                        </div> -->
+                        <!-- Creating a form to read input text  -->
+                        <div class="input-group">
+                            <form action="" method="GET" class="form-control-msg" autocomplete="off">
+                                <input type="text" class="form-control-input" name="input-msg" id ="inputmsgID"  placeholder="  Enter your message">
+                                <input type="image" name="submit" src="send-button.png"  alt="Submit" style="width: 46px ; height: 46px; margin-left: 30px; top: 0px; background: #2C282D; border-radius: 4px; float: right ; " />
+                                <!-- <button type="submit" class="input-group-text">
+                                    <span class="input-group-text">
+                                        <i class="fa fa-paper-plane"></i>
+                                    </span>
+                                </button> -->
+                            </form>    
+                        </div>
+                        
+                    </div>
+                </div>
+                </div>
+                
+
+            <!-- Add message box here  -->
+            
+        </div>
+    </div>
+    
+    <!-- Add javascrip magic here  -->
+    <script src="app.js"></script>
+</body>
+</html>
