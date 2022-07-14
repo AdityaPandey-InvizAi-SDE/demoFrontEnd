@@ -1,0 +1,48 @@
+.main {
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	background-color: #f1f1f1;
+	overflow: auto;
+}
+
+.skinHeading {
+	height: 10vh;
+	display: flex;
+	/* background-color: aquamarine; */
+	/* border-radius: 15px; */
+	padding: 10px 5px 10px 5px;
+	align-items: center;
+	margin: 0px 10px 5px 10px;
+	justify-content: center;
+	color: #2b5075;
+	font-family: cursive;
+}
+.buttonLi {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10px;
+}
+.buttonDiv {
+	width: 100%;
+	display: flex;
+	padding: 10px;
+	justify-content: center;
+}
+.afterClick {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+div#photoElement {
+	width: 100%;
+}
+video#videoElement {
+	box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+	border-radius: 10px;
+}
+canvas.makeStyles-videoContainer-2 {
+	box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+	border-radius: 10px;
+}

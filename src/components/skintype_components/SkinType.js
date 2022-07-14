@@ -8,6 +8,7 @@ import CameraAltIcon from "@mui/icons-material/CameraAlt";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import axios from "axios";
 import ReactLoading from "react-loading";
+import "./skinType.css";
 
 import MediaCard from "../card";
 import { color } from "@mui/system";
@@ -40,18 +41,21 @@ const useStyles = makeStyles({
 		// visibility: 'hidden'
 	},
 	buttonStyle: {
-		background: "white",
-		height: "4vh",
-		width: "20vw",
-		top: "-80vh",
-		// marginLeft: "-8vw",
 		fontFamily: "Proxima Nova",
 		fontSize: "15px",
-		color: " #000000",
-		variant: "contained",
+		color: "#fff",
 		marginLeft: "35vw",
 		marginRight: "35vw",
-		// visibility : 'visible'
+		backgroundColor: "#248fff",
+		borderColor: "#248fff",
+		border: "1px solid transparent",
+		borderRadius: "4px",
+		fontWeight: "600",
+		letterSpacing: "0.125em",
+		minWidth: "8em",
+		padding: "0 1.25em",
+		lineHeight: "2.44140625em",
+		textShadow: "0 0 1px #0b2b4c",
 	},
 
 	IconStyles: {
@@ -90,7 +94,7 @@ const useStyles = makeStyles({
 		// background: { bgcolor },
 	},
 });
-
+// alert("h");
 const SkinType = () => {
 	const classes = useStyles();
 	const videoRef = useRef(null);
@@ -101,6 +105,8 @@ const SkinType = () => {
 	const [skintone_color, Setcolor] = useState({ color: null, percentage: 0 });
 	const [skintone_color1, Setcolor1] = useState({ color: null, percentage: 0 });
 	const [imageid, setImageId] = useState(null);
+	const [close, setClose] = useState(false);
+	const [aclose, setAlose] = useState(false);
 
 	const flipped = true;
 	var snapshot = document.getElementById("snapshot");
@@ -157,11 +163,13 @@ const SkinType = () => {
 
 		setStartStream(true);
 		setTakeSnap(false);
+		setClose(true);
+		setAlose(false);
 
 		document.getElementById("photoElement").style.visibility = "hidden";
 		document.getElementById("cameraicon").style.visibility = "visible";
-		document.getElementById("closeicon").style.visibility = "visible";
-		document.getElementById("backicon").style.visibility = "hidden";
+		// document.getElementById("closeicon").style.visibility = "visible";
+		// document.getElementById("backicon").style.visibility = "hidden";
 	};
 
 	const stopVideo = () => {
@@ -178,6 +186,8 @@ const SkinType = () => {
 		// stream.load();
 		setStartStream(false);
 		document.getElementById("cameraicon").style.visibility = "hidden";
+		setClose(false);
+		setAlose(false);
 	};
 
 	const captureSnap = () => {
@@ -257,11 +267,13 @@ const SkinType = () => {
 			.catch((err) => console.log(err));
 
 		setTakeSnap(true);
+		// setClose(false);
+		setAlose(true);
 
 		document.getElementById("photoElement").style.visibility = "visible";
 		document.getElementById("cameraicon").style.visibility = "hidden";
-		document.getElementById("closeicon").style.visibility = "hidden";
-		document.getElementById("backicon").style.visibility = "visible";
+		// document.getElementById("closeicon").style.visibility = "hidden";
+		// document.getElementById("backicon").style.visibility = "visible";
 	};
 
 	console.log(
@@ -278,43 +290,127 @@ const SkinType = () => {
 	var imageurl3 = `http://127.0.0.1:8000/api/id/${imageid}_103`;
 	return (
 		<div className="main">
-			<Typography align="center">
-				<h1>
-					Find your SkinType <hr />
-				</h1>
-			</Typography>
+			<div className="skinHeading">
+				<h1>Find your SkinType</h1>
+			</div>
 
 			{/* Add canvas to video  */}
-			<div id="snapshot"></div>
-			<Grid container spacing={2} direction="column">
-				<Grid item xs={12} spacing={3} container sx={{ alignItems: "center" }}>
-					<Grid item xs={12}>
-						{takesnap ? null : (
-							<video
-								ref={videoRef}
-								id="videoElement"
-								className={classes.videoContainer}
-								width="640"
-								height="480"
-								autoplay
-								playsinline
-							>
-								{" "}
-							</video>
-						)}
+			<div className="skinContent">
+				<div id="snapshot"></div>
+				<Grid container spacing={2} direction="column">
+					<Grid
+						item
+						xs={12}
+						spacing={3}
+						container
+						sx={{ alignItems: "center" }}
+					>
+						<Grid item xs={12}>
+							{takesnap ? null : (
+								<div className="afterClick">
+									<video
+										ref={videoRef}
+										id="videoElement"
+										className={classes.videoContainer}
+										width="640"
+										height="480"
+										autoplay
+										playsinline
+									>
+										{" "}
+									</video>
+								</div>
+							)}
 
-						<div id="photoElement">
-							<canvas
-								ref={photoRef}
-								className={classes.videoContainer}
-								autoplay
-								playsinline
+							{/* <IconButton
+								id="closeicon"
+								className={classes.IconStyles}
+								aria-label="close"
+								onClick={stopVideo}
 							>
-								{" "}
-							</canvas>
+								Close
+							</IconButton>
+							<IconButton
+								id="backicon"
+								className={classes.IconStyles}
+								aria-label="close"
+								onClick={getVideo}
+							>
+								<ArrowBackIcon />
+							</IconButton> */}
+						</Grid>
+
+						{/* {startStream ? null : (
+							<Button
+								variant="contained"
+								className={classes.buttonStyle}
+								onClick={getVideo}
+							>
+								LIVE CAMERA
+							</Button>
+						)} */}
+
+						<IconButton
+							id="cameraicon"
+							className={classes.IconCameraStyles}
+							aria-label="capture"
+							onClick={captureSnap}
+						>
+							<CameraAltIcon />
+						</IconButton>
+						<div className="buttonDiv">
+							{aclose ? (
+								""
+							) : (
+								<>
+									{close ? (
+										<button
+											// id="closeicon"
+											className={classes.buttonStyle}
+											variant="contained"
+											onClick={stopVideo}
+										>
+											Close
+										</button>
+									) : (
+										<>
+											{startStream ? null : (
+												<button
+													variant="contained"
+													className={classes.buttonStyle}
+													onClick={getVideo}
+												>
+													CAMERA
+												</button>
+											)}
+										</>
+									)}
+								</>
+							)}
+						</div>
+						<div id="photoElement">
+							<div className="afterClick">
+								<canvas
+									ref={photoRef}
+									className={classes.videoContainer}
+									autoplay
+									playsinline
+								>
+									{" "}
+								</canvas>
+							</div>
 
 							{isLoading ? (
-								<div>
+								<div className="cardContainer">
+									<div className="buttonLi">
+										<button
+											variant="contained"
+											className={classes.buttonStyle}
+											onClick={() => window.location.reload(false)}
+										>
+											Re-Take
+										</button>
+									</div>
 									<Grid container spacing={2} className={classes.gridContainer}>
 										<Grid item xs={12} sm={4} md={3}>
 											<MediaCard title="Face Detected" img={imageurl} />
@@ -370,47 +466,9 @@ const SkinType = () => {
 								</div>
 							)}
 						</div>
-
-						<IconButton
-							id="closeicon"
-							className={classes.IconStyles}
-							aria-label="close"
-							onClick={stopVideo}
-						>
-							<CloseIcon />
-						</IconButton>
-						<IconButton
-							id="backicon"
-							className={classes.IconStyles}
-							aria-label="close"
-							onClick={getVideo}
-						>
-							<ArrowBackIcon />
-						</IconButton>
-					</Grid>
-					<Grid item xs={12}>
-						{startStream ? null : (
-							<Button
-								variant="contained"
-								className={classes.buttonStyle}
-								onClick={getVideo}
-							>
-								LIVE CAMERA
-							</Button>
-						)}
-					</Grid>
-					<Grid item xs={12}>
-						<IconButton
-							id="cameraicon"
-							className={classes.IconCameraStyles}
-							aria-label="capture"
-							onClick={captureSnap}
-						>
-							<CameraAltIcon />
-						</IconButton>
 					</Grid>
 				</Grid>
-			</Grid>
+			</div>
 		</div>
 	);
 };

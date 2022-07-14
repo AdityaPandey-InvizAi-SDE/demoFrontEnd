@@ -37,6 +37,7 @@ function App() {
 			{/* <Header /> */}
 			<ResponsiveAppBar />
 			<SkinType />
+			{/* <Skin /> */}
 			{/* <div className="App">
 				<Switch>
 					<ProtectedRoute exact path="/Home" component={Home} />
